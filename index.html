@@ -10,7 +10,10 @@
 	<link href="examples/fixed-positioning.css" rel="stylesheet" type="text/css" />
 	<link href="examples/main.css" rel="stylesheet" type="text/css" />
 
-	  <!--jQuery must also be linked for Bootstrap to function-->
+	<!-- font stack -->
+	<link href="https://fonts.googleapis.com/css?family=Alice|Open+Sans:400,400i,700,700i" rel="stylesheet">
+
+	<!--jQuery must also be linked for Bootstrap to function-->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
   <!-- This website uses Bootstrap JS and CSS through links to MaxCDN's CDN supported version-->
@@ -19,11 +22,18 @@
 </head>
 
 <body>
+	<!-- cloud elements -->
 	<div id="cloud" data-0="background-position:0px 0px;" data-end="background-position:-500px -10000px;"></div>
 	<div id="clouds2" data-0="background-position:0px 0px;" data-end="background-position:-500px -8000px;"></div>
 	<div id="clouds3" data-0="background-position:0px 0px;" data-end="background-position:-500px -6000px;"></div>
 
+	<!-- drop elements -->
 
+	<!-- bee element -->
+	<div class="drop" data-0="right:50px; top:-300px;" data-100="left:72%;bottom[swing]:100%;top:200px;"  data-8000="bottom:50%; left:8%"><img src="examples/images/bee.png" alt="bird" height="300" width="300" id=" bee transform" data-100="transform:scale(1) rotate(0deg);" data-8000="transform:scale(1) rotate(-1440deg);opacity:1;" data-390="" data-390="transform:scale(2) rotate(3240deg);opacity:0; left:50%;"></div>
+
+	<!-- bird elements -->
+	<div class="drop" data-0="left:50px;top:-300px;" data-100="left:8%;bottom[swing]:100%;top:200px;"  data-8000="bottom:50%; left:72%"><img src="examples/images/bird.png" alt="bird" height="300" width="300" id=" bird transform" data-100="transform:scale(1) rotate(0deg);" data-8000="transform:scale(1) rotate(1440deg);opacity:1;" data-390="" data-390="transform:scale(2) rotate(3240deg);opacity:0; left:50%"></div>
 
 	<div id="properties" data-100="top:100%;" data-200="top:0%;" data-500="display:block;" data-3700="top:-100%;display:none;">
 		<h1>Birds &amp; Bees</h1>
@@ -35,21 +45,24 @@
 	</div>
 
 	<!-- gradient effect happens here -->
-	<div id="easing_wrapper" data-0="display:none;" data-390="display:block;" data-490="background:rgba(0, 0, 0, 0);color:rgba(0,0,255,0);" data-650="color:rgba(0,0,255,0);" data-700="background:rgba(255,255,255,1);color:rgba(0,0,255,1);" data-1500="top:0%;" data-2000="top:-100%;">
+	<div class="easing_wrapper" data-0="display:none;" data-390="display:block;" data-490="background:rgba(0, 0, 0, 0);color:rgba(0,0,255,0);" data-650="color:rgba(0,0,255,0);" data-700="background:rgba(255,255,255,1);color:rgba(0,0,255,1);" data-1500="top:0%;" data-2000="top:-100%;">
 			<div class="container-fluid ">
 			<div class="row">
 
 
 			</div>
 		    <div class="row">
-      		<div class="col-sm-8 section-info" > <h2>Prologue</h2>
-      <audio controls>
+      		<div class="col-sm-8 section-info" >
+      			<h2 id="prologue-info" class="easing" data-700="opacity:0;" data-750="opacity:1;">Prologue</h2>
+
+      <audio controls class="easing" data-700="opacity:0;" data-750="opacity:1;">
           			<source src="music/prologue.mp3">
       			</audio></div>
       		<div class="col-sm-4">
 
-      			<div id="act1-copy" class="scroll">
+      			<div id="prologue-copy" class="scroll easing-special" data-700="opacity:0;" data-750="opacity:1;">
         <section class="dialogue">
+        <h3 id="transcript">Transcript</h3>
         <cite>Chana Joffe-Walt</cite>
         <p>
         Act One, "Some Like It Not on the Neck." To begin, I should say, throughout this hour we're going to be talking about subject matter that can be difficult to discuss with children. So if you've got kids listening, that's something to consider. Also, in this next story, as Ira says, we will be acknowledging the existence of sex and talking a lot about our reluctance to speak of its existence.
@@ -310,29 +323,966 @@
 	</div>
 
 	<!-- act 1 here  adding 1800px to previous numbers -->
-	<div id="easing_wrapper" data-0="display:none;" data-2190="display:block;" data-2290="background:rgba(0, 0, 0, 0);color:rgba(0,0,255,0);" data-2450="color:rgba(0,0,255,0);" data-2400="background:rgba(255,255,255,1);color:rgba(0,0,255,1);" data-3300="top:0%;" data-3800="top:-100%;">
 
-	</div>
+    <div class="easing_wrapper" data-0="display:none;" data-2190="display:block;" data-2290="background:rgba(0, 0, 0, 0);color:rgba(0,0,255,0);" data-2450="color:rgba(0,0,255,0);" data-2500="background:rgba(255,255,255,1);color:rgba(0,0,255,1);" data-3300="top:0%;" data-3800="top:-100%;">
+			<div class="container-fluid ">
+			<div class="row">
+
+			</div>
+		    <div class="row">
+      		<div class="col-sm-8 section-info">
+      			<h2 class="easing" data-700="opacity:0;" data-750="opacity:1;">Act 1</h2>
+      			<h3 class="easing" data-700="opacity:0;" data-750="opacity:1;">Some Like it Not (On the Neck)</h3>
+
+      <audio controls class="easing" data-700="opacity:0;" data-750="opacity:1;">
+          			<source src="music/act1.mp3">
+      			</audio></div>
+      		<div class="col-sm-4">
+
+      			<div id="act1-copy" class="scroll easing-special" data-700="opacity:0;" data-750="opacity:1;">
+      				<section class="dialogue">
+      	<h3>Transcript</h3>
+        <cite>Chana Joffe-Walt</cite>
+        <p>
+        Act One, "Some Like It Not on the Neck." To begin, I should say, throughout this hour we're going to be talking about subject matter that can be difficult to discuss with children. So if you've got kids listening, that's something to consider. Also, in this next story, as Ira says, we will be acknowledging the existence of sex and talking a lot about our reluctance to speak of its existence.
+        </p>
+
+        <p>
+        OK, let's start with the beginning. One way a lot of kids learn about the birds and bees is from each other. A couple weeks ago, a seven-year-old named Moxie told me a friend of hers, this kid, Aaron, said something to her that bothered her on the bus. He said, if you drew a picture of a baby on a piece of paper and put it in her belly, that would make a baby.
+        </p>
+
+        <p>
+        Moxie knew this was incorrect. That's why it bothered her. So a week later at the playground across the street from her house, she sat Aaron down.
+        </p>
+
+        <cite>Moxie</cite>
+        <p>The situation about the paper not working thing.</p>
+
+        <cite>Aaron</cite>
+        <p>What's that means?</p>
+
+        <cite>Moxie</cite>
+        <p>On the bus a few days ago, you talked about paper and body and about a baby--</p>
+
+        <cite>Aaron</cite>
+        <p>Oh, right, right, right, right.</p>
+
+        <cite>Moxie</cite>
+        <p>That was a silly plan.</p>
+
+        <cite>Aaron</cite>
+        <p>I'm sure it's going to work, but I don't know.</p>
+
+        <cite>Moxie</cite>
+        <p>I'm not sure because the baby can't survive, you see? I'm just saying.</p>
+
+        <cite>Aaron</cite>
+        <p>Sorry.</p>
+
+        <cite>Moxie</cite>
+        <p>You need to make a sperm. And the sperm somehow has to get into my body. And that's how it works.</p>
+
+        <cite>Aaron</cite>
+        <p>I did not know that.</p>
+
+        <cite>Moxie</cite>
+        <p>Well, now you do.</p>
+
+        <cite>Aaron</cite>
+        <p>Sorry.</p>
+        </section>
+
+        <cite>Chana Joffe-Walt</cite>
+        <p>When it comes to sex, a lot of us learn the wrong thing first and the right thing later. You learn through a series of corrections. You start to find out that half the things your brother told you were not right, that that scene in the movie is not realistic, that Sofia de Santos was lying when she says she did that thing, because that thing is not possible.</p>
+
+        <p>That's basically our system. You learn things wrong, test them out, and hopefully get the real story from someone named Moxie. This begins on the playground and just continues all the way until you actually start having sex, and all the weird information that was not corrected begins to matter.</p>
+
+        <section class="dialogue">
+        <cite>Chana Joffe-Walt</cite>
+        <p>What were you hoping they were going to cover?</p>
+
+        <cite>Deondre</cite>
+        <p>I hope they cover everything.</p>
+
+        </section>
+
+        <cite>Chana Joffe-Walt</cite>
+        <p>Deondre is in a classroom at Buffalo State with about 50 other people, mostly men, mostly his fraternity brothers. Here's here for some sex ed.</p>
+
+        <section class="dialogue">
+        <cite>Deondre</cite>
+        <p>I feel like some stuff people don't know.</p>
+
+        <cite>Chana Joffe-Walt</cite>
+        <p>What don't you know?</p>
+
+        <cite>Deondre</cite>
+        <p>I don't know. That's a good question, you know.</p>
+
+        </section>
+
+        <cite>Chana Joffe-Walt</cite>
+        <p>This is a voluntary workshop about sexual assault and consent, on a Monday night. You'd think this event might not win out over, say, hitting up the Jamba Juice or staring at your van Gogh poster.</p>
+
+        <p>But this room is packed. The students are wide awake. Knees are bouncing. Hands are shooting up in the air.</p>
+
+        <p>The instructor, Paula Madrigal, is talking about the importance of consent.</p>
+
+        <section class="dialogue">
+        <cite>Paula Madrigal</cite>
+        <p>So consent is a verbal and enthusiastic "yes," OK? Why is it enthusiastic?</p>
+
+        <cite>Student 1</cite>
+        <p>Because you actually want to do it.</p>
+
+        <cite>Paula Madrigal</cite>
+        <p>Exactly. You want to do it. And sex should be fun, right?</p>
+
+        <cite>Student 2</cite>
+        <p>Yeah.</p>
+
+        <cite>Paula Madrigal</cite>
+        <p>Yeah. I hope so.</p>
+      </section>
+
+        <cite>Chana Joffe-Walt</cite>
+        <p>This kind of workshop was repeated in classrooms all across campus here and throughout the country in the last year. College administrators are panicked about sexual assault, as they should be. So they're turning to this kind of education as the answer.</p>
+
+        <p>Instead of mostly focusing on protecting women-- things like rape whistles or travel with a buddy programs-- they also want to teach men actual sentences to say. Do you like this? Can I kiss you?</p>
+
+        <p>But the students here are struggling with the basic premise. They have to learn to speak in this new way because if you don't, you're a rapist? Because it's just more virtuous? They have questions right from the start.</p>
+
+        <section class="dialogue">
+        <cite>Paula Madrigal</cite>
+        <p>It's a continuous process of checking up or checking in, either/or. What does that mean?</p>
+
+        <cite>Student 2</cite>
+        <p>You keep asking her? That's weird.</p>
+
+        <cite>Student 3</cite>
+        <p>That kind of messes up the mood. If she says yes-- I'm not trying to be funny-- but if she says yes, and then she keeps saying, yeah, I got to be like, hey, you sure? Are you really sure? Like, you're about to do this?</p>
+
+        <cite>Student 4</cite>
+        <p>Every 10 minutes.</p>
+
+        <cite>Student 3</cite>
+        <p>I'm almost there. I'm about to go to the drawer to get the protection. No, no. You're right. You're right. You're right.</p>
+
+        <cite>Student 2</cite>
+        <p>And you're like, no.</p>
+
+        <cite>Student 3</cite>
+        <p>Obviously, I'm going to stop. But the reaffirmation of "yes" over and over again. That kind of would mess up the mood. So I feel like-- should there be a number of times that you should-- you know?</p>
+
+        </section>
+
+        <cite>Chana Joffe-Walt</cite>
+        <p>He presses them on this-- two, three, seven? But that guy is overtaken by his fraternity brothers, who also have urgent questions. Does body language count as consent? What if she said yes before you got into the room when you were both sober, like, in a message on Twitter or something? How many beers is too much to have consent? Again, please offer a number.</p>
+
+       <section class="dialogue">
+       <cite>Student 5</cite>
+        <p>You ever heard the term alcohol is liquid courage? What if it's in the sense where it's like, you are probably nervous, and you don't want to be nervous around her. So that gives you-- that's your liquid courage. I am not going to be shaky when she come over, you feel me? So you're not using it to get a "yes."</p>
+      </section>
+
+        <cite>Chana Joffe-Walt</cite>
+        <p>The next guy over interrupts. What if both parties are drunk? And then across the room-- does the girl need to ask for consent? Another student-- OK, what if we've been together for a year?</p>
+
+        <p>Paula Madrigal replies, you always need consent, even if you're a woman, even if you're a man sleeping with men, even if you're in a relationship, even if you have sex every day, even if you are in the middle of sex.</p>
+
+        <section class="dialogue">
+        <cite>Paula Madrigal</cite>
+        <p>Or, if you guys are engaging in sexual activity, and maybe all of a sudden someone decides I want to try it rough. You guys already started having sex. The other person can withdraw that consent, OK? So that's why it's active.</p>
+
+        <p>What if someone's like, I want to have another person here. Now, let's have three people. You're already having sex.</p>
+
+        <p>So if all of sudden, they're like, surprise, I have another person, you can be like, yeah, I didn't really sign up for that. I'm out of here, OK? Does that make a little bit more sense when we talk about checking in and the active process?</p>
+
+        </section>
+
+        <cite>Chana Joffe-Walt</cite>
+        <p>Those are carefully chosen examples. The vast majority of sexual assaults on college campuses occur between two people who know each other, and there's not always physical force. So Paula is trying to say, take the picture you have in your mind of a serial predator rapist. Put it to the side for a moment.</p>
+
+        <p>Imagine instead a person who wakes up in the morning and wonders quietly to himself, she was into that, right? Yeah, she was into that. Imagine that person is wrong.</p>
+
+        <p>The workshop was supposed to be 45 minutes. It's been an hour. Paula Madrigal is trying to wrap up.</p>
+
+        <section class="dialogue">
+        <cite>Paula Madrigal</cite>
+        <p>So how do you guys, then-- you guys are the experts-- how do you ask for consent?</p>
+
+        <cite>Student 6</cite>
+        <p>It doesn't sound right. It's like you're messing up the whole mood when you ask that.</p>
+        </section>
+
+        <cite>Chana Joffe-Walt</cite>
+        <p>It's been an hour, and the students in this room are still fixated on this question of the mood. I don't remember there being a whole lot of mood when it came to sex in college. I don't know, maybe you guys all had candlelit dorm rooms.</p>
+
+        <p>But there is genuine panic behind that question. It's dismissed in a workshop about sexual assault because-- of course it is. We're talking about assault. You're talking about the mood. Those are two separate conversations.</p>
+
+        <p>But these guys are trying to have just one conversation about everything, a conversation that takes into account consent but also all of their questions and anxieties when it comes to talking to a person they're sleeping with. It seems like that's a conversation they've never had.</p>
+
+        <section class="dialogue">
+        <cite>Nagib Gonzalez</cite>
+        <p>That is one of the hardest things ever, is to like, try to find out-- how would you say, find out what the other person wants?</p>
+        </section>
+
+        <cite>Chana Joffe-Walt</cite>
+        <p>This is Nagib Gonzalez, a college freshman in Buffalo. I know Nagib from previous reporting. He's lovely. And like every freshman at his school, he's been to a consent training in the last year.</p>
+
+        <p>I feel like if we're going to lay the burden of changing the way we talk about sex at the feet of 18 year-olds, people who are already many years into learning weird and bad and confusing information, if that's our answer to reduce sexual assault, I wanted to know more about what these guys actually know and where they learned it.</p>
+
+        <section class="dialogue">
+        <cite>Nagib Gonzalez</cite>
+        <p>Men talk about women all the time. But I just thought, my roommate always talks to me about his favorite sex position. And then my other friends will tell me their favorite sex positions. And then we'll just talk about, oh, that's cool. Oh, I'll try that one day.</p>
+
+        <cite>Chana Joffe-Walt</cite>
+        <p>But that's men who are sleeping with women talking about what women like to other men.</p>
+
+        <cite>Nagib Gonzalez</cite>
+        <p>Yeah, so it's more like we'll decide what women do or don't like.</p>
+
+        <cite>Chana Joffe-Walt</cite>
+        <p>But when do you talk to women about what they like?</p>
+
+        <cite>Nagib Gonzalez</cite>
+        <p>Hmm, yeah, OK, it's definitely men talk to men about what women like. I feel like that's how it is. Even if you get told by a woman what she likes, you'll be like, oh, I knew that.</p>
+        </section>
+
+        <cite>Chana Joffe-Walt</cite>
+        <p>Lately Nagib's biggest source of information is his roommate, Elijah Leslie. He brought Elijah up a lot. Elijah says he first learned about the birds and bees from his cousin.</p>
+
+        <section class="dialogue">
+        <cite>Elijah Leslie</cite>
+        <p>Then you get older and you see Sports Illustrated. Then you see the Playboys. Then you see the porn.</p>
+
+        <p>And then you see the Girls Gone Wild. And then you see those late night-- the Girls Gone Wild, the late-night commercials, and stuff like that. Like, 4:00 in the morning, Girls Gone Wild. I think that's when you start learning.</p>
+        </section>
+
+        <cite>Chana Joffe-Walt</cite>
+        <p>Elijah was not the first or the last person I interviewed who told me he learned about sex from porn. So Nagib is learning how to engage with women from other men who are learning from porn. That's like learning Chinese from a white American in Wyoming. You're missing some key primary source information.</p>
+
+        <p>Every person I talk to who works on sexual assault prevention brought up one thing as particularly troubling about the way men learn about sex. And it wasn't porn. It was baseball-- that we talk about sex like it's baseball, getting a home run as a metaphor for sex.</p>
+
+        <p>They said, think of how many bad lessons are built into that metaphor. You go first base, second base, third base. There's only one direction to move. And a home run is a win.</p>
+
+        <p>Not to mention-- you're on opposing teams. It's competitive. And it's a sport that mostly only men play.</p>
+
+        <p>Nagib Gonzalez is not attached to sex being like baseball or porn. Nagib just wants to be a good person. He wants to be good to people. He's looking for some guidance. Nagib is always looking for guidance. He solicits advice often.</p>
+
+        <section class="dialogue">
+        <cite>Nagib Gonzalez</cite>
+        <p>This is an example. I remember my cousin telling me, yo, you got to kiss your girl's neck. I do it all the time. Oh, my girl loves it, and stuff like that. So then that's kind of where you learn.</p>
+        </section>
+
+        <cite>Chana Joffe-Walt</cite>
+        <p>Nagib, ever the careful student, kissed necks, every one of them. Another friend told him, women like it when you're funny. He tries to be that. But then Nagib had a girlfriend who told everybody he was a bad kisser. And someone told him, please stop kissing my neck. She thought it was gross. And he felt like, wait, do I know things, or do I not know things?</p>
+
+        <section class="dialogue">
+        <cite>Nagib Gonzalez</cite>
+        <p>Definitely when you're younger, like you think of it more as like rules and steps to get laid. When you're younger, you think, like, oh, I have to do this step. I have to follow this step. So I have to kiss her in this certain place. Then I have to make out with her.</p>
+
+        <p>And I have to, I don't know, touch her, like, I don't know, grab her butt or something. And then finally we get here.</p>
+
+        <p>But it's not like that. It's not like that at all. It's less-- it's very-- it varies. It's different from person to person.</p>
+
+        <p>It could be anything. I don't know. Girls vary. Not every girl will like something that you do. Every girl is different.</p>
+        </section>
+
+        <cite>Chana Joffe-Walt</cite>
+        <p>Everyone is different. Girls vary. People vary. What if that was the first thing you learned about sex?</p>
+
+        <p>What if, instead of starting at 18 years old with rape and moving backwards to teach consent, what if you just started with "people vary"? Because if you understand that, consent follows. You have to ask questions and talk about what you like and don't like. Otherwise, you'll never know. You may be with one of those neck people, and you may not.</p>
+    			</div>
+</div>
+</div>
+</div>
+</div>
+
+
 
 	<!-- act 2 here  adding 1800px to previous numbers -->
-	<div id="easing_wrapper" data-0="display:none;" data-3990="display:block;" data-4090="background:rgba(0, 0, 0, 0);color:rgba(0,0,255,0);" data-4250="color:rgba(0,0,255,0);" data-4200="background:rgba(255,255,255,1);color:rgba(0,0,255,1);" data-5100="top:0%;" data-5600="top:-100%;">
+	<div class="easing_wrapper" data-0="display:none;" data-3990="display:block;" data-4090="background:rgba(0, 0, 0, 0);color:rgba(0,0,255,0);" data-4250="color:rgba(0,0,255,0);" data-4300="background:rgba(255,255,255,1);color:rgba(0,0,255,1);" data-5100="top:0%;" data-5600="top:-100%;">
+		<div class="container-fluid ">
+			<div class="row">
 
+			</div>
+		    <div class="row">
+      		<div class="col-sm-8 section-info">
+      			<h2 class="easing" data-700="opacity:0;" data-750="opacity:1;">Act 2</h2>
+      			<h3 class="easing" data-700="opacity:0;" data-750="opacity:1;">If You See Racism Say Racism</h3>
+
+      <audio controls class="easing" data-700="opacity:0;" data-750="opacity:1;">
+          			<source src="music/act2.mp3">
+      			</audio></div>
+      		<div class="col-sm-4">
+
+      			<div id="act2-copy" class="scroll easing-special" data-700="opacity:0;" data-750="opacity:1;">
+      			<h3>Transcript</h3>
+      			<section class="dialogue">
+		        <cite>Chana Joffe-Walt</cite>
+		        <p>For the rest of today's show, we are going to leave sex behind, and we are going to step forward from the beginning of life to the murky, complicated middle-- the other facts of life that you really don't want to have to explain to children because you wish they were not facts or a part of life at all. Our next story is from W. Kamau Bell. He's a comedian and a father.</p>
+
+		        <p>And recently, Kamau's been planning for a conversation he really does not want to have with his children, one that is familiar to black parents everywhere in America. Act Two, "If You See Racism, Say Racism." Here's Kamau.</p>
+
+		        <cite>W. Kamau Bell</cite>
+		        <p>I talk about race and racism in my act a lot. Some would say too much. It was how I was raised. Some families have hardware stores. My family has thinking about racism.</p>
+
+		        <p>So it's no surprise to me that after I became a parent, I began to do jokes about race and racism and fatherhood.</p>
+
+		        <section class="dialogue">
+		        <cite>W. Kamau Bell</cite>
+		        <p>And people ask me all time, like, you're black. You talk about race a lot. Have you talked to your daughter about the fact she said that she's black? I'm like, no, because she's three and a half.</p>
+
+		        <p>I don't want to bum her out yet, you know what I'm saying? Being black is great, but it's a big responsibility to know that. My mom waited until I was eight before she told me I was black. And she did it the right way.</p>
+
+		        <p>One night, she's like, tonight for dinner, you can have whatever you want. I was like, yay. And she's like, you can stay up all night, watch TV. I was like, yay.</p>
+
+		        <p>And you're black. I was like, hold on a second. That explains everything. I thought every day I would just kind of having a [BLEEP] day. It's good to know why now. It's good to know there's a historical context for that.</p>
+		        </section>
+
+		        <p>I now have two girls, a baby named Juno and an almost four-year-old named Sami. My wife, Melissa, is white. And Sami calls herself "peanut butter." Juno doesn't say much of anything yet.</p>
+
+		        <p>My wife and I have both put our toes-- or at least our older daughter, Sami's toe-- in the race pool. But we have not even put the slightest hint of a Sami toe into the racism pool. Yes, those are separate pools. The race pool is filled with positive stories of black achievement, African American role models, books and TV shows featuring diverse characters. Our race pool even has Kwanzaa.</p>
+
+		        <p>But Sami's racism pool is completely drained with a lock on the gate, and we run past it every day on the way to the race pool. And every day that goes by, I feel guilty. The racism pool is treacherous. It's not fun to swim in.</p>
+
+		        <p>And if you aren't careful, you drown in the sorrow of the black experience in America. Damn. We live in Berkeley. People have been protesting the police blocks from our house. How do I explain that?</p>
+
+		        <p>This was on my mind recently-- how to teach Sami about racism-- when this thing happened. It was January 26, my birthday. I was having a low-key celebration, just like I like them.</p>
+
+		        <p>I was carrying a children's book I just bought for Sami, The Case for Loving-- the Fight for Interracial Marriage. Mildred and Richard Loving are the interracial couple responsible for the Supreme Court striking down the laws in 16 states that banned interracial marriage. And if I was going to get into racism with Sami, then the Loving story, which was about a family like ours, seemed like a great place to start.</p>
+
+		        <p>I was headed to meet up with my wife at the Elmwood Cafe, a restaurant she loves. This was her second time eating there that day after we'd gone there earlier for breakfast. It's not really my kind of place-- a little too impressed with itself, a little humble braggy about its lattes served in bowls.</p>
+
+		        <p>So I get to the Elmwood Cafe. And I see my wife sitting at one of the sidewalk tables with our baby and three other moms and their babies. The four moms all look like they would go out for the same casting call for a white woman, mid-30s who's recently had a kid, and while exhausted, is doing a great job of keeping it together.</p>
+
+		        <p>My wife introduced me to the group. We made small talk. One of the women asked about the book in my hand, so I turned it over and showed it to her. She nodded at the cover. I didn't get the sense she knew the story.</p>
+
+		        <p>That's when I heard, knock, knock, knock. It was on the cafe's window coming from inside. I looked up and saw a woman, a server who clearly worked at the Elmwood Cafe. She was angry and looking at me.</p>
+
+		        <p>Next, she flicked her head and mouthed something. I didn't know what, but the message was clear. Get! Or maybe it was scram! Seriously, what's the difference?</p>
+
+		        <p>I was flooded with thoughts I could barely process. I was stunned. I was pissed. I wanted to run away.</p>
+
+		        <p>I felt like I might pass out. I was actually strangely embarrassed, as if I had done something wrong. Maybe I shouldn't have been talking to my wife and her friends.</p>
+
+		        <p>Melissa and I might have exchanged words. We might not have. I think I said something to the effect of, a woman told me to get out of here. There was some "reallys" and a couple of "whats."</p>
+
+		        <p>Within seconds, another server came out and pretended to do her job. She didn't have a water jug. She didn't bus any tables. She didn't drop or pick up any checks. She just stalked the area. And by the area, I mean me.</p>
+
+		        <p>Finally Melissa couldn't take it. "This is my husband." Oh, the waitress said, looking at nobody in particular, we thought you were selling something. She thought I was selling something?</p>
+
+		        <p>That's my wife and my daughter, I said. We just ate here earlier today. Oh, we thought you were selling something, she said, sorry.</p>
+
+		        <p>In Berkeley, "selling something" is code for homeless. What she was saying was, we thought you were homeless. First of all, I was wearing a knit cap, a hoodie, jeans, and sneakers. I was dressed like Mark Zuckerberg in winter.</p>
+
+		        <p>But I knew the part of me that looked homeless wasn't my clothes. It was my skin, specifically how my skin was getting so close to a bunch of white moms and their white babies. But Juno only looks white. She's a double agent.</p>
+
+		        <p>Waitress again, "I'm sorry." Me, "I bet you're sorry. OK, I'm going to take a walk and think about racism." That's actually what I said. I didn't yell it, but I didn't say it in my chest either.</p>
+
+		        <p>Melissa stayed behind to give the waitress a piece of her mind. Then we went home, and Melissa cried. We hugged each other, and were preoccupied with it, really bothered, really obsessive, and stuck in it. We knew we had to do something.</p>
+
+		        <p>I blogged about the whole thing and posted a picture of myself wearing exactly what I'd worn when I was at the Elmwood, and also holding my book on the Lovings. Within a couple hours a story spread around the Bay Area. People online started debating every single point.</p>
+
+		        <p>People debated whether what happened was racist, whether or not I was racist. People blamed me for marrying a white woman. It became the righteous indignation story of the week.</p>
+
+		        <p>It's hard to know what to want after something like this happens. I didn't want an apology from the owner, though we got one. I didn't want the waitress to be fired, though she was. Melissa and I wanted something more substantial.</p>
+
+		        <p>We wanted a public conversation between us and the cafe owner and the employees involved. We wanted the community to show up and talk about their experiences with things like this. We wanted a reckoning. And we found out a lot of people wanted that.</p>
+
+		        <p>So many people wanted to discuss the Elmwood Cafe that our idea to have a public discussion snowballed. So with our daughters in our mind, before I could say Rosa Parks, we had a venue and an event planner. The cafe owner was there and a full-on panel of vetted academics and activists. There was a detailed itinerary and a moderator.</p>
+
+		        <section class="dialogue">
+		        <cite>Moderator</cite>
+		        <p>So I'm sure that many of you have heard the story of the incident that happened on January 26.</p>
+		        </section?
+
+		        <cite>W. Kamau Bell</cite>
+		        <p>On a Friday in March, Melissa and I sat on a stage at a middle school in a packed auditorium. My main concern was that somehow all the planning and structure was going to lead to an event that was careful, sanitized, and maybe the worst thing, boring.</p>
+
+		        <p>It wasn't, due in large part to high school senior Kadijah Means. She's 18 and made a name for itself in the Bay Area as an activist. She's an awesome public speaker who, importantly to me, knows how to open with a joke.</p>
+
+		        <section class="dialogue">
+		        <cite>Kadijah Means</cite>
+		        <p>So number one, I want to say that I've been black all of my life. That's a pretty good amount of motivation for me to be a social justice advocate.</p>
+		        </section>
+
+		        <cite>W. Kamau Bell</cite>
+		        <p>And then she said something that made me take extra notice. She talked about being younger than my daughter, Sami, when she learned about race.</p>
+
+		        <section class="dialogue">
+		        <cite>Kadijah Means</cite>
+		        <p>I learned about race at a really young age, maybe like two or three. My dad has a really good way of teaching about fractions. When he would make me toast, he would cut it in half and be like, this is half. This is a fourth.</p>
+
+		        <p>So I learned about race in a kind of similar way, learning that "white" didn't mean white like paper, but it was a construct. Yeah, I learned that pretty young. That was weird.</p>
+		        </section>
+
+		        <cite>W. Kamau Bell</cite>
+		        <p>My oldest daughter is four. She's just begun to understand that people are different colors. I can't imagine somehow connecting that to the fact that race itself is a construct. I'm not sure I could define the word "construct" to another adult, let alone a four-year-old. Kadijah then closed with a few tips on how we can all be less racist, like this one.</p>
+
+		        <section class="dialogue">
+		        <cite>Kadijah Means</cite>
+		        <p>Focus less on color blindness because honestly, you're not going to get a gold star for that. Be more color competent. Be more--</p>
+
+		        <p>[APPLAUSE]</p>
+
+		        <p>Thank you.</p>
+		        </section>
+
+		        <cite>W. Kamau Bell</cite>
+		        <p>And this one.</p>
+
+		        <section class="dialogue">
+		        <cite>Kadijah Means</cite>
+		        <p>Please don't call people "articulate." Don't come up to me after and tell me I'm articulate. Whoa. Please do not do that. And there's a whole bunch of reasons why that we don't have time for, but--</p>
+
+		        <cite>W. Kamau Bell</cite>
+		        <p>You might want to grab a pen and some paper, because she's on a roll.</p>
+
+		        <cite>Kadijah Means</cite>
+		        <p>Your mind makes generalizations. That's what it does. It's not bad to do that. It's bad to think that one generalization is what everyone is.</p>
+
+		        <p>You also have to take a step outside of that and remember that people are individuals. People have different lives. Just because I'm black doesn't mean I act like other black people.</p>
+
+		        <p>Black people built this country whether you like it or not. Love us, please. Thank you.</p>
+
+		        <p>[APPLAUSE]</p>
+		        </section>
+
+		        <cite>W. Kamau Bell</cite>
+		        <p>I was so impressed by Kadijah. I began to think about her dad, the one who taught her about fractions and race. Kadijah was completely versed in the evils of racism, but she was also idealistic about the future. She understood how well-intended people could do racist things but how that doesn't always make them bad people. She got the broad strokes and the nuances.</p>
+
+		        <p>And Kadijah also knew how to do something that is absolutely essential to your survival as a black person in America. She saw and identified racism in her everyday life, and she didn't internalize it. But she also didn't ignore it. She just judo flipped it and kept walking.</p>
+
+		        <p>I wanted some advice on how to raise a kid like that. Who was this dad? I imagine him to be a mix of 60s-era Berkeley hippie and "hope and change era" Obama.</p>
+
+		        <section class="dialogue">
+		        <cite>Cliff Means</cite>
+		        <p>I don't smile a lot. So I'm not the smiling black man.</p>
+		        </section>
+
+		        <cite>W. Kamau Bell</cite>
+		        <p>Yeah, that's Cliff Means. He's a self-described businessman who means business. I like to imagine that his business card reads on one line, "Cliff Means," and under that, "Business."</p>
+
+		        <p>In fact, when we asked Cliff to do the interview, initially he said, I don't know you. I don't know your audience. So no.</p>
+
+		        <p>So when my producer, Robyn, and I met with Cliff and Kadijah, I knew he was still reluctant. But I wasn't sure what had changed his mind. I had to ask.</p>
+
+		        <section class="dialogue">
+		        <cite>W. Kamau Bell</cite>
+		        <p>Why are you doing this interview, then?</p>
+
+		        <cite>Cliff Means</cite>
+		        <p>Kadijah really wanted me to do this is the bottom line. Now, had I found out anything too horrific about either one of you, then it probably still would have been no. But I couldn't find anything terrible.</p>
+
+		        <p>Well, I'll tell you one thing that leaned in your favor. I did read something written about you because I was trying to as much homework as I could because my answer was really no. And your writing had made enough white people angry that I said, OK, maybe he's actually trying to do something.</p>
+		        </section>
+
+		        <cite>W. Kamau Bell</cite>
+		        <p>So it's clear that Cliff is not exactly a "why can't we just get along?" type of guy. And he has very clear thoughts about what should be taught to kids.</p>
+
+		        <section class="dialogue">
+		        <cite>W. Kamau Bell</cite>
+		        <p>How old was Kadijah when you first started explaining race to her?</p>
+
+		        <cite>Cliff Means</cite>
+		        <p>I would imagine four or five years old. She was an early talker. And we spent a ton of time together, because I asked her, does she want to enter a speech for the Martin Luther King celebration at her school?</p>
+
+		        <p>And we co-wrote a speech that people were very enamored with. And I explained to her that Martin Luther King wasn't killed for the "I Have a Dream" speech. But once he started talking about getting poor whites and poor blacks together, then he had to go.</p>
+
+		        <p>But my children, I taught, you will be going to school, and you will be getting told that there's justice for all. And then, when you find out there's not, then you'll be confused. And I don't want my children confused. I want them knowledgeable.</p>
+
+		        <cite>W. Kamau Bell</cite>
+		        <p>So at what age did you get into the history of black people in this country and have to cover things like pre-civil rights movement, like Jim Crow and slavery and things like that?</p>
+
+		        <cite>Cliff Means</cite>
+		        <p>At five, I taught her about slavery. And I taught it as what it is, that Europe went to war with West Africa for centuries. Kids used to love Native Americans when I was a kid because they fought back. Why didn't black people fight back?</p>
+
+		        <p>Well, they did and were slaughtered and terrorized and tortured and murdered and raped-- I probably left out rape at that age for her-- captured, kidnapped, and brought over Africans to America. And they were here terrorized and murdered. And we go from that stage all the way to being here enslaved.</p>
+		        </section>
+
+		        <cite>W. Kamau Bell</cite>
+		        <p>He taught her that at five. Cliff is clearly not afraid to throw the kids into the deep end of the racism pool and let them learn to swim. This is pretty much the opposite of what I had done so far. How deep did their racism pool get?</p>
+
+		        <section class="dialogue">
+		        <cite>Cliff Means</cite>
+		        <p>She learned things like white officers following the black migration to northern California to work in the shipping yards, in southern California was shipping yards. Hey, we'd better bring some racist white cops here to keep these people in line.</p>
+
+		        <p>She learned that there were black cooks grinding up glass in the kitchen to make sure that white racist, brutal slave masters' intestines would bleed and be open. And then he'd be gone. What was your question?</p>
+
+		        [LAUGHTER]
+
+		        <p>Do you want the church thing brought up at all?</p>
+
+		        <cite>Kadijah Means</cite>
+		        <p>It's fine.</p>
+		        </section>
+
+		        <cite>W. Kamau Bell</cite>
+		        <p>That's Kadijah. I don't know what the church thing is, but I could tell it was one of those family stories. Kadijah let my producer, Robert, and I in on it.</p>
+
+		        <section class="dialogue">
+		        <cite>Kadijah Means</cite>
+		        <p>After my dad told me about racism, I distinctly remember like, being angry with white people. Like, how dare you enslave my people? And so we were at church one day. And--</p>
+
+		        <cite>Cliff Means</cite>
+		        <p>It wasn't actually at church. It was a church function. It was in the church. It was a church function held after.</p>
+
+		        <cite>Kadijah Means</cite>
+		        <p>So I guess I went up onto the pulpit and asked for the mic. And I told the entire congregation that black people and white people should not be together. And that was my synthesis of racism in America and slavery that I had come up with throughout the week after my dad told me about racism.</p>
+
+		        <cite>Robyn</cite>
+		        <p>You're saying you became a five-year-old segregationist?</p>
+
+		        <cite>Kadijah Means</cite>
+		        <p>I did. I did.</p>
+		        </section>
+
+		        <cite>W. Kamau Bell</cite>
+		        <p>In my house we can't have a five-year-old segregationist. I mean, don't get me wrong. It'd be fun for a bit in a Kids Say the Darndest Things kind of way.</p>
+
+		        <p>I ran a version of what Kadijah said in church by my wife Melissa as a hypothetical. What would you do if Sami told you white people and black people can't be together? It would be an immediate investigation.</p>
+
+		        <p>Melissa would ask, what makes you say that? Why do you think they can't be together? And yes, OK, white people did hurt your people. But also, mommy and daddy are together. And that's good, isn't it?</p>
+
+		        <p>It would be a conversation with me, it would be a conversation with Sami every day, all the time. I asked Cliff how he felt about Kadijah's speech at church.</p>
+
+		        <section class="dialogue">
+		        <cite>Cliff Means</cite>
+		        <p>I was like, well, she learned what she learned. It's probably a healthy reaction for having learned what she learned this week. I think the audience was a little surprised.</p>
+
+		        <cite>W. Kamau Bell</cite>
+		        <p>Was there a white person in her life that you felt like, uh-oh, if she thinks that about all white people, then she's going to hate this one white person who is actually a nice person?</p>
+
+		        <cite>Cliff Means</cite>
+		        <p>Oh no, absolutely not. I'm not concerned about the white man in America. I think he's doing very well.</p>
+
+		        <p>And I had no concern, nor do I now have any concern for anyone's feelings or whatever else being hurt by a five-year-old. Maybe it could start a conversation with them. They can think about some of the things that they enjoy that no one else enjoys in this country. So no.</p>
+		        </section>
+
+		        <cite>W. Kamau Bell</cite>
+		        <p>I really like Cliff. Cliff is not an easy person, but then why should he be? Cliff is the type of person who keeps the rest of us a little more honest. I want more Cliff in my life.</p>
+
+		        <p>Kadijah told me that even with her candid, unfiltered upbringing, she could tell early on the difference between white oppression and the white people in her life. But to be able to do that, she had to learn about it and get angry. I get that.</p>
+
+		        <p>When I first began to really understand the violence of racism, I was angry. It makes sense to be angry. The anger helps you push back against the injustice. Anger is not the goal. It's the fuel.</p>
+
+		        <p>Even so, sometimes I feel like I have too much anger. There are black people in America dying from racism. Bad treatment in a fancy coffee shop is the softest and easiest part of racism. There were times during this whole thing I felt like I should just drop it. Cliff and I talked about that, too.</p>
+
+		        <section class="dialogue">
+		        <cite>W. Kamau Bell</cite>
+		        <p>Being told to leave a cafe on College Avenue, that's not a big deal on a basic level. But I knew that you can't just keep letting your boundary get pushed.</p>
+
+		        <cite>Cliff Means</cite>
+		        <p>Oh, I don't let anything go. I don't let anything go. Don't shake my hand like you're black or something. You shake my hand like a white man. You shake my hand like you're shaking-- don't relate to me.</p>
+
+		        <cite>W. Kamau Bell</cite>
+		        <p>Don't let anything go I feel like is the message of the day. That's what I feel. But I never put it into those words. Those are the words I was looking for. Don't let anything go.</p>
+		        </section>
+
+		        <p>Racism is real and happening right now every day. That means that every day, I have an opportunity to teach my daughters about racism. So this is to you, Sami and Juno. I promise you from now on, I'm not going to let it go. The stakes are too high.</p>
+
+		        <cite>Chana Joffe-Walt</cite>
+		        <p>W. Kamau Bell-- he's the host of United Shades of America on CNN.</p>
+
+		        <p>Coming up, a group of grownups who are not fumbling at all. They have a plan, and it includes costumes, volcanoes, and a talking stick. That's in a minute from Chicago Public Radio, when our program continues.</p>
 	</div>
+	</div>
+</div>
+</div>
+</div>
 
 
 	<!-- act 3 here  adding 1800px to previous numbers -->
-	<div id="easing_wrapper" data-0="display:none;" data-5600="display:block;" data-5890="background:rgba(0, 0, 0, 0);color:rgba(0,0,255,0);" data-6050="color:rgba(0,0,255,0);" data-6000="background:rgba(255,255,255,1);color:rgba(0,0,255,1);" data-6900="top:0%;" data-7400="top:-100%;">
+	<div class="easing_wrapper" data-0="display:none;" data-5600="display:block;" data-5890="background:rgba(0, 0, 0, 0);color:rgba(0,0,255,0);" data-6050="color:rgba(0,0,255,0);" data-6100="background:rgba(255,255,255,1);color:rgba(0,0,255,1);" data-6900="top:0%;" data-7400="top:-100%;">
+		<div class="container-fluid ">
+			<div class="row">
+
+			</div>
+		    <div class="row">
+      		<div class="col-sm-8 section-info">
+      			<h2 class="easing" data-700="opacity:0;" data-750="opacity:1;">Act 3</h2>
+				<h3 class="easing" data-700="opacity:0;" data-750="opacity:1;">About that Farm Upstate</h3>
+      <audio controls class="easing" data-700="opacity:0;" data-750="opacity:1;">
+          			<source src="music/act3.mp3">
+      			</audio></div>
+      		<div class="col-sm-4">
+
+      			<div id="act3-copy" class="scroll easing-special" data-700="opacity:0;" data-750="opacity:1;">
+      			<h3>Transcript</h3>
+      			<cite>Chana Joffe-Walt</cite>
+        <p>It's This American Life. I'm Chana Joffe-Walt sitting in for Ira Glass. Today's show, "The Birds and the Bees." We are listening in as grownups try to convey their most important, deeply held beliefs to small humans who cannot yet zip up their own jackets.</p>
+
+        <p>We started at the beginning-- where do babies come from? In this last part of the show, we're going to talk about the end. Act Three, "About that Farm Upstate." Jonathan Goldstein has this last story.</p>
+
+        <p>And a quick warning-- like I said at the beginning of the show, these are stories about grownups talking with children about difficult subject matter. So if you have kids with you, keep that in mind. OK, here's Jonathan.</p>
+
+        <cite>Jonathan Goldstein</cite>
+        <p>There's a house in Salt Lake City where kids come to have death explained to them-- not just that people die, but how they die. It's called The Sharing Place. And the first person they meet there is Jill Macfarlane. This is how she explains a heart attack.</p>
+
+        <cite>Jill Macfarlane</cite>
+        <p>Your heart stopped working, and it couldn't move your blood through your body.</p>
+
+        <cite>Jonathan Goldstein</cite>
+        <p>She has a quiver full of kid-sized explanations for all the ways that life can end, like kidney failure.</p>
+
+        <cite>Jill Macfarlane</cite>
+        <p>Your kidneys are washing machines for your blood. And when they stop working, your blood's dirty. Then it poisons your body, and you die.</p>
+
+        <cite>Jonathan Goldstein</cite>
+        <p>Overdoses?</p>
+
+        <cite>Jill Macfarlane</cite>
+        <p>Overdose is when you have a sickness in your brain called addiction. And addiction makes you take medicine that's not good for you, and you take way too much of it. But not all medicine is bad either.</p>
+
+        <cite>Jonathan Goldstein</cite>
+        <p>Have you dealt with murder?</p>
+
+        <cite>Jill Macfarlane</cite>
+        <p>Mm-hmm. It's when somebody chooses to make your body stop working. It's a choice. We also do choice and not choice. Like murder is a choice. Cancer is not a choice.</p>
+
+        <p>We also do contagious or not contagious. Like, you're not going to get my depression. And you're not going to get my cancer.</p>
+
+        <cite>Jonathan Goldstein</cite>
+        <p>The Sharing Place is a grief support center for kids who've lost a family member. It's one of hundreds of centers like it around the country. Kids sit in support groups led by grownups. But the point is to allow children to talk to other children about their grief.</p>
+
+        <p>They're encouraged to speak in concrete language about death because, the thinking goes, that's how to process death's finality. So people don't pass away. You don't lose them. They die.</p>
+
+        <p>We invest so much effort trying to shield kids from the scary things in life. We place advisories before TV shows that warn against inappropriate language and subject matter. And what could be less appropriate than death?</p>
+
+        <p>So for all we let on-- bunnies lay eggs. Your mother means well. And life pretty much goes on forever. To do otherwise feels like you're breaking a basic pact that grownups have with one another.</p>
+
+        <cite>Jonathan Goldstein</cite>
+        <p>Who did you have die?</p>
+
+        <cite>Child 1</cite>
+        <p>My dad, two guinea pigs, a dog, two cats, and my dad. And that's all.</p>
+
+        <cite>Jonathan Goldstein</cite>
+        <p>The kids here are more comfortable talking about death than most adults are, like Hailey, who lost a sister and brother to mitochondrial disease. She and her other brother have the disease too, but not as bad. They've had to deal with something that most other people haven't had to, let alone other kids. So it's hard to talk about it with the kids at school.</p>
+
+        <cite>Hailey</cite>
+        <p>Sometimes they don't even know what we're talking about because we know all this stuff, like all these words that none of the other kids heard about, like neurological or something like that. And they're like, what does that mean? Or like a feeding tube, what does that mean?</p>
+
+        <cite>Child 2</cite>
+        <p>It's really hard to explain.</p>
+
+        <cite>Hailey</cite>
+        <p>It's not hard to explain, but it's hard to tell them. And they still don't understand where it goes or what it does to help you.</p>
+
+        <cite>Jonathan Goldstein</cite>
+        <p>But this is a place where kids do understand. There are more than a dozen separate groups at The Sharing Place broken down by age. The groups meet twice a month for about an hour and a half in a refurbished house made to feel homey and safe, so it's like visiting your grandma's.</p>
+
+        <p>There are rooms where kids meet and talk and rooms where their parents do the same. But most of the rooms are dedicated to play. There's a costume room where kids can dress up like police, ballerinas, cowboys.</p>
+
+        <cite>Child 3</cite>
+        <p>I'm Spider-Man, so you can do whatever I tell you to do.</p>
+
+        <cite>Jonathan Goldstein</cite>
+        <p>And beside it is a room called the soft room, which is full of props and toys, including an old telephone. One little girl, who watched her mother have a heart attack, spent an entire play session pretending to call for help.</p>
+
+        <p>Hi 9-1-1, she'd say. My grandma's dying. Hurry. Come quick. Then she'd hang up and dial again. Hi, 9-1-1. My dad's dying. Hurry. Come quick.</p>
+
+        <p>One of the most popular rooms is a padded room called the volcano room.</p>
+
+        <cite>Child 4</cite>
+        <p>I'm going to play in the volcano room.</p>
+
+        <cite>Jonathan Goldstein</cite>
+        <p>It's full of cushions and large rubber yoga balls. It's even got an adult-sized dummy to wrestle and punch. The kids can scream, yell, pound the walls, and throw things around. They love it.</p>
+
+        <cite>Child 4</cite>
+        <p>Whoa! Bling! Boom! Bam! No ball can attack me! Woo!</p>
+
+        <cite>Jonathan Goldstein</cite>
+        <p>It's a release. Eve is nine years old, and her father died about two years ago. She knows that feeling of keeping it all bottled up inside. She says she can go days at school like that.</p>
+
+        <cite>Eve</cite>
+        <p>It kind of feels really overwhelming. And it's like, you don't know what to do. And on the inside, it's hurting somehow in a feeling way. It hurts somehow.</p>
+
+        <cite>Jonathan Goldstein</cite>
+        <p>Where would you say it hurts?</p>
+
+        <cite>Eve</cite>
+        <p>Usually with me, it would hurt in the throat and kind of in my stomach. It's like something that needs to come out, but I really need to learn how to do that.</p>
+
+        <cite>Nancy Reiser</cite>
+        <p>I think there are people who, in this world, who can grow up and don't really know how to talk frankly about lots of things.</p>
+
+        <cite>Jonathan Goldstein</cite>
+        <p>Nancy Reiser is one of the co-founders of The Sharing Place. And this is what she says when children ask her how people die.</p>
+
+        <cite>Nancy Reiser</cite>
+        <p>Well, close your eyes and listen.</p>
+
+        <p>[BREATHES DEEPLY]</p>
+
+        <p>And there isn't the next breath. Does it hurt? I don't think so. I don't think so. Their face doesn't look like it hurt.</p>
+
+        <cite>Jonathan Goldstein</cite>
+        <p>Nancy is a therapist who works with young children. For a long time, the very concept that children do, in fact, grieve was hotly disputed. Freud said that it was difficult for children to even conceive of such loss. And as a culture, Nancy says, that's pretty much the idea that we operate under.</p>
+
+        <cite>Nancy Reiser</cite>
+        <p>Oh look, she's playing. She's OK. She didn't really understand what happened. Well, she's playing. But then, half an hour later, she's in the house holding her teddy bear and sucking her thumb and crying.</p>
+
+        <p>So we need to let people know that children grieve, and help them when they grieve so it's not stuck inside and comes out when they try to have a relationship later. When they start to get intimate, they cannot bear it, and they go off. And they don't know why.</p>
+
+        <cite>Jonathan Goldstein</cite>
+        <p>Nancy says children just grieve differently than adults, especially little children. They grieve in fits and starts. They can't focus on it for very long.</p>
+
+        <p>And grief is more physical for them. They'll act out their anger, maybe kick a door, which is the reason for the volcano room at The Sharing Place. They might also regress, suddenly using baby talk or sucking their thumbs. And if they're potty trained, they might become untrained.</p>
+
+        <p>They are also magical thinkers. I heard stories of kids who were afraid to go to sleep because grandma went to sleep and didn't wake up. One little boy wandered away from his mom at the emergency room, saying, I'm looking for dad. We left him here last time. Another boy said he just wanted to die for a few days so he can go to heaven and teach his little sister how to ride a tricycle.</p>
+
+        <p>Children also re-grieve. That is, with every new stage of development, they experience their grief anew. And with every milestone-- when their braces come off, when they get their driver's license, when they graduate-- they'll inevitably think, I wish my mom was here.</p>
+
+        <p>And given all of this, the thought behind The Sharing Place and other centers like it is that kids can help one another in a way that adults perhaps can't help them. That's why they're brought together in these groups. In short, kids speak the same language.</p>
+
+        <cite>Gavin</cite>
+        <p>Is that thing turned on?</p>
+
+        <cite>Jonathan Goldstein</cite>
+        <p>It is turned on. What do you think about that?</p>
+
+        <p>Before the session at The Sharing Place, I sit down with Gavin, who's six, and his brother Aidan, who's 8. They're both dressed in matching long-sleeved polo shirts. Gavin sits on his mother Nicole's lap. Aidan sits beside them.</p>
+
+        <cite>Jonathan Goldstein</cite>
+        <p>Oh, do you want do you want to introduce yourself?</p>
+
+        <cite>Aiden</cite>
+        <p>Hi, I'm Aiden. My dad died by--</p>
+
+        <cite>Nichole</cite>
+        <p>Suicide.</p>
+
+        <cite>Aiden</cite>
+        <p>Suicide.</p>
+
+        <cite>Jonathan Goldstein</cite>
+        <p>His little brother, Gavin, points his finger to his head and pulls the pretend trigger. He snaps his head back.</p>
+
+        <cite> Nichole</cite>
+        <p>Yep, that's what happened.</p>
+
+        <cite>Jonathan Goldstein</cite>
+        <p>What did you just do there?</p>
+
+        <cite>Gavin</cite>
+        <p>He shot his head. And then we didn't know he was dead, right, Mama?</p>
+
+        <cite>Nichole</cite>
+        <p>We didn't.</p>
+
+        <cite>Gavin</cite>
+        <p>And then we said, wake up, Dad.</p>
+
+        <cite>Nichole</cite>
+        <p>No, you didn't see him. Mommy found him. And he was already dead.</p>
+
+        <cite>Gavin</cite>
+        <p>Did you turn him over?</p>
+
+        <cite>Nichole</cite>
+        <p>I didn't touch him.</p>
+
+        <cite>Gavin</cite>
+        <p>OK.</p>
+
+        <cite>Aiden</cite>
+        <p>She knew he was dead because she saw blood and things.</p>
+
+        <cite>Jonathan Goldstein</cite>
+        <p>On his head?</p>
+
+        <cite>Aiden</cite>
+        <p>Yeah. And he was a terrific guy-- so nice, so generous. He would always help anyone. He was a terrific guy.</p>
+
+        <cite>Nichole</cite>
+        <p>What did you learn here that helped you the most?</p>
+
+        <cite>Aiden</cite>
+        <p>To understand how he died.</p>
+
+        <cite>Jonathan Goldstein</cite>
+        <p>Sometimes that task-- telling the kids that their parent committed suicide-- falls to Jill Macfarlane because the surviving parent or guardian might be so inside their own grief that they can't bring themselves to do it. Jill explains suicide as simply as she does other kinds of death. There's a sickness in your brain called depression, she says, and it can make you decide to make your own body stop working. She says it's required that the kids know how their brother or sister or mother died before starting the group.</p>
+
+        <cite>Jill Macfarlane</cite>
+        <p>I had one family say he died because he was sick. One family said that he died in a car accident. One family said that he accidentally shot himself, he didn't mean to.</p>
+
+        <cite>Jonathan Goldstein</cite>
+        <p>It was Jill who helped their mom break the news to Aidan and Gavin that their dad shot himself. She says that conversation was especially hard.</p>
+
+        <cite>Jill Macfarlane</cite>
+        <p>The boys immediately said, you don't know my dad. Why would you say that? You don't know us.</p>
+
+        <p>And I said, I know. I don't know you. But your mom's here today because she needed my help in telling you this because this is a really hard and scary thing that happened. And your mom told me that that's what happened.</p>
+
+        <p>And Aidan just was like, you crazy lady, there's no way that we're going to talk about this. This is not what happened.</p>
+
+        <p>It was horrible and was awful. And I cried the whole night. It was just awful. I just felt so horrible. And my husband was like, you can't do this. You have to go to the director and tell her that you can't do this again.</p>
+
+        <cite>Jonathan Goldstein</cite>
+        <p>Suicide is always one of the highest-- if not the highest-- cause of death for Sharing Place families at any given time. There's actually a special group devoted specifically to suicide. And a lot of the stories you hear in that group are so horrible that you can't help but wonder why tell the kids what happened at all. Why not just say they died and leave it at that?</p>
+
+        <p>According to Jill and her colleagues, we need to tell children so they won't find out later in life and wonder, what else did they lie to me about? They also don't want to have to cloak it in a way that suggests it's unspeakable and shameful. They get enough of that idea at school.</p>
+
+        <p>This is Eve again, whose father also shot himself.</p>
+
+        <cite>Eve</cite>
+        <p>Well, some people at school, they say-- this makes me feel really sad, too-- they say that when somebody kills themselves, that means they go to the wrong place. I don't believe that. But it just makes me feel really sad when they say that. Instead of going to a happy place, they'd go to a sad.</p>
+
+        <cite>Jonathan Goldstein</cite>
+        <p>But even if you don't believe it and you know it's nonsense, it's still kind of hurts that someone would say that?</p>
+
+        <cite>Eve</cite>
+        <p>Yeah, it does. Because it's like somebody judging my papa, which, it's not a bad thing. A lot of people do that. But it just kind of feels a little weird. Like on the inside, it makes me feel like I'm going to scream and do something like that.</p>
+
+        <cite>Jonathan Goldstein</cite>
+        <p>What are the things that you wish that people would say?</p>
+
+        <cite>Eve</cite>
+        <p>Probably it's OK that that has happened. And we can help you with feeling better and understanding you. That's probably something I would want somebody to say.</p>
+
+        <cite>Jonathan Goldstein</cite>
+        <p>Once a child knows how their loved one died, they're encouraged to say it out loud. There's a kind of sorcery to it-- naming the dragon so you can defeat it.</<p>p>
+
+        <p>I sat in on the suicide group, which is different than the other groups, in that kids tend to come to meetings for a longer period of time, partly because they didn't get to say goodbye. The kids sit in a circle at the beginning of the meeting and hand around a talking stick. One by one they say their name, who died, and how they died.</p>
+
+        <cite>Elias</cite>
+        <p>My name is Elias, and the person who died was my dad. And he died by shooting himself with a gun. And he wanted to die.</p>
+
+        <cite>Lindsey</cite>
+        <p>Hello, my name is Lindsey. My dad died. He died by suicide. And I regret not seeing him because I hadn't seen him for a couple of months before his death.</p>
+
+        <cite>Jonathan Goldstein</cite>
+        <p>There's also a different question they respond to each time they meet. What do you miss most about the person? Is there anything you don't miss? Tonight's question is, what do you regret?</p>
+
+        <cite>Ethan</cite>
+        <p>My name is Ethan, and the person who died is my dad. He died by shooting himself in the head. And I don't know if I have any regrets. I just can't remember.</p>
+
+        <cite>Jonathan Goldstein</cite>
+        <p>It can take a long time for them to get to this point, where they can say the word "suicide." The Sharing Place never corrects any of the kids or forces them to say anything they don't want to. But they notice when a child is finally able to say it.</p>
+
+        <p>The night I was there, Aiden, the nine-year-old I talked to who had a hard time saying the word suicide, was finally able to say it in group. The volunteers sat around and talked about it afterwards.</p>
+
+        <cite>Volunteer 1</cite>
+        <p>It was hard for him, I could tell. He wasn't about to say it. But he said it. And I was proud of him. But it took him probably at least a minute to actually get those words out.</p>
+
+        <cite>Volunteer 2</cite>
+        <p>He had to ask his mom if it was OK to say.</p>
+
+        <cite>Volunteer 3</cite>
+        <p>So she wasn't coaching him?</p>
+
+        <cite>Volunteer 1</cite>
+        <p>Nope.</p>
+
+        <cite>Volunteer 2</cite>
+        <p>No. Uh-huh. It was good.</p>
+
+        <cite>Jonathan Goldstein</cite>
+        <p>On the other hand, Aiden's brother, Gavin, the six-year-old, talks about his dad's suicide incessantly. He also draws guns during play time and even sculpts them out of Play-Doh. This is Jill Macfarlane again.</p>
+
+        <cite>Jill Macfarlane</cite>
+        <p>He tells everybody at school, my dad shot his brains. And it freaks everybody out. And so then he gets in trouble at school, which then he was like, I guess I can't ever talk about my dad.</p>
+
+        <p>But this is how kindergartners talk and process things. It's just easy for them to talk about. But it scares other people.</p>
+
+        <cite>Jonathan Goldstein</cite>
+        <p>Is it OK for other kids in their class to hear that kind of thing?</p>
+
+        <cite>Jill Macfarlane</cite>
+        <p>Well, yeah. I mean, is there a right answer to that? I don't know.</p>
+
+        <cite>Jonathan Goldstein</cite>
+        <p>I don't know either. If I were a parent, I'm not sure I'd want my kid hearing that kind of thing at school. And while Jill doesn't have an answer, she does think kids being allowed to express themselves is much healthier than sending them a message that it's wrong to say this kind of stuff out loud. And that's got to be a step in the right direction.</p>
+
+        <cite>Sara Mohammed</cite>
+        <p>I have very, very, very fond memories of this place. I actually tried to come through the side door because that was the door that I always came in through. And I was like, I can use the adult entrance finally.</p>
+
+        <cite>Jonathan Goldstein</cite>
+        <p>Sara Mohammed hasn't been to The Sharing Place for a full six years. She's 21 now. But when she was 11, her older brother hanged himself.</p>
+
+        <p>Even though he was supposed to be babysitting her, her parents had told her to keep an eye out on him because of his past suicide attempts. Obviously what happened wasn't her fault. But she blamed herself, which is something I heard other kids here talk about too.</p>
+
+        <p>It's easy for an adult to say, don't be silly. It's not your fault. But it's a whole other thing to talk with a kid at The Sharing Place who says, I know exactly what you're talking about.</p>
+
+        <cite>Sara Mohammed</cite>
+        <p>It was kind of nice seeing the older kids whose loved ones had been gone for a few years, how they were able to go to school normally and just live their normal lives because I just didn't want to go to school. I didn't want to be with kids who just didn't know. It was too hard.</p>
+
+        <cite>Jonathan Goldstein</cite>
+        <p>I asked Sara if there was a turning point, a moment when she began to feel like maybe she was doing a little better. She said, yes. She was in the courtyard with a bunch of other kids.</p>
+
+        <cite>Sara Mohammed</cite>
+        <p>We were just out there painting rocks or something for a fundraiser. And we were just talking, just talking like normal. And I realized that I hadn't had a conversation like that in about a year just where I felt 100% free and just laughing and not feeling guilty about laughing and just happy. And yeah, that was really the first time in a good nine months after my brother had passed that I felt OK.</p>
+
+        <cite>Jonathan Goldstein</cite>
+        <p>It's the kids themselves who decide when they're ready to stop coming to The Sharing Place. But on average, they stay about two years. When they're ready to leave, they have to announce their intention two times in group before their final goodbye.</p>
+
+        <cite>Volunteer 4</cite>
+        <p>Any of you that would like to say something to him, which I'm sure several of you will?</p>
+
+        <cite>Jonathan Goldstein</cite>
+        <p>The goodbye is ceremonial. And on the last night I was there, at the end of the meeting, they said goodbye to a kid named Robby. He sat in the circle with the other kids and volunteers. And anybody who wanted to could pick up the talking stick and say a few words. His friend, Jessica, was the last kid to do so.</p>
+
+        <cite>Jessica</cite>
+        <p>I'll definitely miss you because you're like, one of my best friends in this group. And I'll miss seeing you. And our major fight that we had in the volcano room, it was not my fault.</p>
+
+        <cite>Robby</cite>
+        <p>You asked for it.</p>
+
+        <cite>Jessica</cite>
+        <p>No I didn't.</p>
+
+        <cite>Robby</cite>
+        <p>Yes, you did.</p>
+
+        <cite>Jessica</cite>
+        <p>No. It was just really fun. And I'm going to miss seeing you and miss hanging out with you.</p>
+
+        <cite>Jonathan Goldstein</cite>
+        <p>At Robby's last meeting, there was a kid who'd just shown up. It was his first meeting. He had long bangs hanging over his eyes, and except for his name, didn't say anything the whole time.</p>
+
+        <p>Whenever a new person joins, the veteran kids have a chance to gauge their own progress, to remember what they were like when they first showed up and think about how bad it used to be, and how now it isn't as bad. And ultimately, like Robby, they'll make way for someone on the long waiting list, a list on which new names are added all the time. They'll say, I think it's time to go. And then they'll say it again.</p>
+
+        <p>[MUSIC - "TEACH THE GIFTED CHILDREN" BY LOU REED]</p>
+
+        <p>Credits.</p>
+
+        <cite>Chana Joffe-Walt</cite>
+        <p>Jonathan Goldstein is a producer at Gimlit Media. His new podcast, Heavyweight, comes out this fall.</p>
+
+        <p>Our program was produced by Robyn Semien, with Zoe Chace, Sean Cole, Stephanie Foo, Ira Glass, Miki Meek, Johnathan Menjivar, Bryan Reed, Alissa Shipp, and Nancy Updike. Our senior producer for today's show is Julie Snyder.</p>
+
+        <p>Editing help from Joel Lovell. Our technical director is Matt Tierney. Production help from Lyra Smith. Seth Lind is our operations director. Emily Condon is our production manager. Elise Bergerson is our office manager. Elna Baker scouts stories for our show. Research help from Michelle Harris and Christopher Swetala. Music help from Damian Graef and Rob Geddis.</p>
+
+        <p>[ACKNOWLEDGMENTS]</p>
+
+        <p>Our website, thisamericanlife.org. This American Life is delivered to Public Radio stations by PRX, the Public Radio Exchange. Thanks today to my boss, Ira Glass, who was very gracious in handing over today's show-- at first. But then, in the last day or so, I think he's a little bored or something. He keeps popping his head in randomly.</p>
+
+        <cite>Child 3</cite>
+        <p>I'm Spider-Man. So you can do whatever I tell you to do.</p>
+
+        <cite>Chana Joffe-Walt</cite>
+        <p>I'm Chana Joffe-Walt. Ira will be back next week with more stories of This American Life.</p>
+
+        <p>[MUSIC - "TEACH THE GIFTED CHILDREN" BY LOU REED]</p>
+
+        <p>© 2015 This American Life</p>
+      </div>
+	</div>
+</div>
+</div>
 
 	</div>
 
 
-		<div class="drop" data-0="left:15%;bottom[swing]:100%;" data-7000="bottom:0%;"><img src="examples/images/bee.png" alt="bee" height="150" width="150" id="bee"></div>
-
-		<div class="drop" data-0="left:25%;bottom[swing]:100%;" data-7000="bottom:0%;"><img src="examples/images/bird.png" alt="bird" height="300" width="300" id="bird"></div>
 
 	</div>
 
-
+	<div id="properties" data-7500="top:100%;" data-8000="top:0%;" data-8200="display:block;">
+		<h1>The End</h1>
+	</div>
 
 
 	<script type="text/javascript" src="dist/skrollr.min.js"></script>
@@ -352,6 +1302,7 @@
 		}
 	});
 	</script>
+
 </body>
 
 </html>
