@@ -268,3 +268,51 @@ h4 {
 	font-weight: regular !important;
 	line-height: 1.5em !important;
 }
+
+/*making the website responsive*/
+@media only screen and (max-width: 500px) {
+	.container-fluid{
+		padding: 30px !important;
+	}
+	.scroll{
+		padding: 1em;
+		height: 65vh;
+		width: 80vw;
+		top: 18vh;
+	}
+
+	audio {
+		margin-top: 85vh;
+	}
+
+	h1{
+		font-size: 3em !important;
+	}
+	h2{
+		font-size: 2em !important;
+		display: block;
+	}
+	h3{
+		font-size: 1.25em !important;
+		padding-bottom: 30px !important;
+	}
+
+	#subtitle{
+		font-size: 2em !important;
+		width: 75%;
+		margin-left: auto;
+		margin-right: auto;
+	}
+	#bird{
+		height: 150px;
+		width: 150px;
+		left: 11px;
+		top: 20vh;
+	}
+	#bee{
+		height: 150px;
+		width: 150px;
+		right: 5px;
+		top: 20vh;
+	}
+}
